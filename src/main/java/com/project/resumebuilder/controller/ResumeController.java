@@ -1,10 +1,10 @@
 package com.project.resumebuilder.controller;
 
-import com.project.resumebuilder.document.Resume;
+import com.project.resumebuilder.modals.Resume;
 import com.project.resumebuilder.dto.CreateResumeRequest;
 import com.project.resumebuilder.service.FileUploadService;
 import com.project.resumebuilder.service.ResumeService;
-import jakarta.servlet.http.HttpServletRequest;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +24,7 @@ import static com.project.resumebuilder.Utils.AppConstants.*;
 @RequestMapping(RESUME)
 @RequiredArgsConstructor
 @Slf4j
+@Tag(name = "Resume API", description = "Create,Get,Update,Delete")
 public class ResumeController {
 
     private final ResumeService resumeService;

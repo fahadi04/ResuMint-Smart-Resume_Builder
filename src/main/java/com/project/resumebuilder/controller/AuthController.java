@@ -1,18 +1,18 @@
 package com.project.resumebuilder.controller;
 
-import com.project.resumebuilder.document.User;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.dto.LoginRequest;
 import com.project.resumebuilder.dto.RegisterRequest;
+import com.project.resumebuilder.repository.UserRepository;
 import com.project.resumebuilder.service.AuthService;
 import com.project.resumebuilder.service.FileUploadService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
-import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -26,10 +26,12 @@ import static com.project.resumebuilder.Utils.AppConstants.*;
 @RequiredArgsConstructor
 @Slf4j
 @RequestMapping(AUTH_CONTROLLER)
+@Tag(name = "Authentication API's", description = "Register,Verify-Email,Upload-Image,Login,Resend-Verification-Email,Profile")
 public class AuthController {
 
     private final AuthService authService;
     private final FileUploadService fileUploadService;
+    private final UserRepository userRepository;
 
     @PostMapping(REGISTER)
     public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
@@ -79,13 +81,11 @@ public class AuthController {
 
     @GetMapping(PROFILE)
     public ResponseEntity<?> getProfile(Authentication authentication) {
-        //Step 1: Get the principal object
+
         Object principalObject = authentication.getPrincipal();
 
-        //Step 2: Call the service method
         AuthResponse currentProfile = authService.getProfile(principalObject);
 
-        //Step 3: return the response
         return ResponseEntity.ok(currentProfile);
     }
 

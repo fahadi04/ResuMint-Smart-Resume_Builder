@@ -1,6 +1,6 @@
 package com.project.resumebuilder.repository;
 
-import com.project.resumebuilder.document.Resume;
+import com.project.resumebuilder.modals.Resume;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;

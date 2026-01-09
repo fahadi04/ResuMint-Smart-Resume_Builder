@@ -1,4 +1,4 @@
-package com.project.resumebuilder.document;
+package com.project.resumebuilder.modals;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;

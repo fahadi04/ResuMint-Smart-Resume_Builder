@@ -1,7 +1,7 @@
 package com.project.resumebuilder.service;
 
 import com.project.resumebuilder.Utils.JwtUtil;
-import com.project.resumebuilder.document.User;
+import com.project.resumebuilder.modals.User;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.dto.LoginRequest;
 import com.project.resumebuilder.dto.RegisterRequest;
@@ -15,7 +15,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
-import java.util.Optional;
 import java.util.UUID;
 
 @Service
@@ -153,9 +152,12 @@ public class AuthService {
     }
 
     public AuthResponse getProfile(Object principalObject) {
-        User existingUser = (User) principalObject;
+
+        String userId = principalObject.toString();
+
+        User existingUser = userRepository.findById(userId)
+                .orElseThrow(() -> new RuntimeException("User not found"));
+
         return toResponse(existingUser);
     }
-
-
 }

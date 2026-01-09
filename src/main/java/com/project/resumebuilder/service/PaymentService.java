@@ -1,7 +1,7 @@
 package com.project.resumebuilder.service;
 
-import com.project.resumebuilder.document.Payment;
-import com.project.resumebuilder.document.User;
+import com.project.resumebuilder.modals.Payment;
+import com.project.resumebuilder.modals.User;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.repository.PaymentRepository;
 import com.project.resumebuilder.repository.UserRepository;

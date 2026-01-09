@@ -1,12 +1,11 @@
 package com.project.resumebuilder.service;
 
-import com.project.resumebuilder.document.Resume;
+import com.project.resumebuilder.modals.Resume;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.dto.CreateResumeRequest;
 import com.project.resumebuilder.repository.ResumeRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.jspecify.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;

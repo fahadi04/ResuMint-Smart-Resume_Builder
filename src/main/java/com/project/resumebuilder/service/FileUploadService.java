@@ -2,7 +2,7 @@ package com.project.resumebuilder.service;
 
 import com.cloudinary.Cloudinary;
 import com.cloudinary.utils.ObjectUtils;
-import com.project.resumebuilder.document.Resume;
+import com.project.resumebuilder.modals.Resume;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.repository.ResumeRepository;
 import lombok.RequiredArgsConstructor;

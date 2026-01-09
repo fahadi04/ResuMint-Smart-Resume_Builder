@@ -1,4 +1,4 @@
-package com.project.resumebuilder.document;
+package com.project.resumebuilder.modals;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

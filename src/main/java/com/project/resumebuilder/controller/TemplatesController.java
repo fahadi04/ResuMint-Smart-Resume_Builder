@@ -1,6 +1,7 @@
 package com.project.resumebuilder.controller;
 
 import com.project.resumebuilder.service.TemplatesService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.Map;
 @RequiredArgsConstructor
 @RequestMapping("/api/templates")
 @Slf4j
+@Tag(name = "Template API's", description = "Get template")
 public class TemplatesController {
 
     private final TemplatesService templatesService;
