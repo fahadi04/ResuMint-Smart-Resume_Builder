@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # ResuMint 🚀  
 ### Smart Resume Builder Platform
 
