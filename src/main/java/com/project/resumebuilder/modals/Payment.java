@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/main/java/com/project/resumebuilder/modals/Payment.java
 package com.project.resumebuilder.modals;
-=======
-package com.project.resumebuilder.document;
->>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/document/Payment.java
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.*;

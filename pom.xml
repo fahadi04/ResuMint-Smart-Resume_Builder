@@ -84,17 +84,13 @@
             <scope>runtime</scope>
         </dependency>
 
-<<<<<<< HEAD:pom.xml
         <!-- 💳 RAZORPAY -->
-=======
->>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/pom.xml
         <dependency>
             <groupId>com.razorpay</groupId>
             <artifactId>razorpay-java</artifactId>
             <version>1.4.8</version>
         </dependency>
 
-<<<<<<< HEAD:pom.xml
 
         <!--        Swagger-->
         <dependency>
@@ -112,8 +108,6 @@
         </dependency>
 
         <!-- 🧪 TEST -->
-=======
->>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/pom.xml
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>

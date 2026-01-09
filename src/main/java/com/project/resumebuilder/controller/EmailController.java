@@ -1,10 +1,7 @@
 package com.project.resumebuilder.controller;
 
 import com.project.resumebuilder.service.EmailService;
-<<<<<<< HEAD:src/main/java/com/project/resumebuilder/controller/EmailController.java
 import io.swagger.v3.oas.annotations.tags.Tag;
-=======
->>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/controller/EmailController.java
 import jakarta.mail.MessagingException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,10 +23,7 @@ import java.util.Objects;
 @RequiredArgsConstructor
 @RequestMapping("/api/email")
 @Slf4j
-<<<<<<< HEAD:src/main/java/com/project/resumebuilder/controller/EmailController.java
 @Tag(name = "Email API's", description = "Send Resume")
-=======
->>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/controller/EmailController.java
 public class EmailController {
 
     private final EmailService emailService;
