@@ -1,7 +1,12 @@
 package com.project.resumebuilder.service;
 
+<<<<<<< HEAD:src/main/java/com/project/resumebuilder/service/PaymentService.java
 import com.project.resumebuilder.modals.Payment;
 import com.project.resumebuilder.modals.User;
+=======
+import com.project.resumebuilder.document.Payment;
+import com.project.resumebuilder.document.User;
+>>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/service/PaymentService.java
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.repository.PaymentRepository;
 import com.project.resumebuilder.repository.UserRepository;

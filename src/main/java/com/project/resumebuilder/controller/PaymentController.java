@@ -1,9 +1,15 @@
 package com.project.resumebuilder.controller;
 
+<<<<<<< HEAD:src/main/java/com/project/resumebuilder/controller/PaymentController.java
 import com.project.resumebuilder.modals.Payment;
 import com.project.resumebuilder.service.PaymentService;
 import com.razorpay.RazorpayException;
 import io.swagger.v3.oas.annotations.tags.Tag;
+=======
+import com.project.resumebuilder.document.Payment;
+import com.project.resumebuilder.service.PaymentService;
+import com.razorpay.RazorpayException;
+>>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/controller/PaymentController.java
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.ResponseEntity;
@@ -20,7 +26,10 @@ import static com.project.resumebuilder.Utils.AppConstants.PREMIUM;
 @RequiredArgsConstructor
 @RequestMapping("/api/payment")
 @Slf4j
+<<<<<<< HEAD:src/main/java/com/project/resumebuilder/controller/PaymentController.java
 @Tag(name = "Payment API's", description = "Create,Verify,Get")
+=======
+>>>>>>> 2e6bd7391b2314686e5031531703650826b2533d:resumebuilder/src/main/java/com/project/resumebuilder/controller/PaymentController.java
 public class PaymentController {
 
     private final PaymentService paymentService;
