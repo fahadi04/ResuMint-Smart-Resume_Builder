@@ -83,7 +83,7 @@ cd resumint-backend
 
 **Configure database in application.properties**
 
-spring.datasource.url=jdbc:mysql://localhost:3306/resumint
+spring.datasource.url=jdbc:mongodb://localhost:27017/resumint
 spring.datasource.username=root
 spring.datasource.password=yourpassword
 
