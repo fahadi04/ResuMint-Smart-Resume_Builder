@@ -15,6 +15,8 @@
     <groupId>com.project</groupId>
     <artifactId>resumebuilder</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <name>resumebuilder</name>
+    <description>Smart Resume Builder Backend</description>
 
     <properties>
         <java.version>17</java.version>
@@ -22,7 +24,7 @@
 
     <dependencies>
 
-        <!-- 🌐 REQUIRED FOR SERVLET FILTERS -->
+        <!-- 🌐 WEB -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -91,20 +93,19 @@
             <version>1.4.8</version>
         </dependency>
 
-
-        <!--        Swagger-->
+        <!-- 📘 SWAGGER -->
         <dependency>
             <groupId>org.springdoc</groupId>
             <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
             <version>2.5.0</version>
         </dependency>
 
-
         <!-- 🧩 LOMBOK -->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <version>1.18.30</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- 🧪 TEST -->
@@ -119,9 +120,11 @@
     <build>
         <plugins>
 
+            <!-- COMPILER -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
                 <configuration>
                     <source>17</source>
                     <target>17</target>
@@ -129,11 +132,13 @@
                         <path>
                             <groupId>org.projectlombok</groupId>
                             <artifactId>lombok</artifactId>
+                            <version>1.18.30</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
 
+            <!-- SPRING BOOT -->
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
