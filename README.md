@@ -61,9 +61,8 @@ resumint-backend
 
 Swagger UI is available after running the application:
 
-http://localhost:8080/swagger-ui.html
-or
-http://localhost:8080/swagger-ui/index.html
+https://resumint-smart-resumebuilder-production.up.railway.app/swagger-ui/index.html#/
+
 
 ## ⚙️ Setup & Installation
 
