@@ -2,7 +2,7 @@ package com.project.resumebuilder.controller;
 
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.dto.LoginRequest;
-import com.project.resumebuilder.dto.RegisterRequest;
+import com.project.resumebuilder.dto.RegisterRequestDTO;
 import com.project.resumebuilder.repository.UserRepository;
 import com.project.resumebuilder.service.AuthService;
 import com.project.resumebuilder.service.FileUploadService;
@@ -34,7 +34,7 @@ public class AuthController {
     private final UserRepository userRepository;
 
     @PostMapping(REGISTER)
-    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequest request) {
+    public ResponseEntity<?> register(@Valid @RequestBody RegisterRequestDTO request) {
         log.info("Inside AuthController - register():{}", request);
         AuthResponse response = authService.register(request);
         log.info("Response from service: {}", response);

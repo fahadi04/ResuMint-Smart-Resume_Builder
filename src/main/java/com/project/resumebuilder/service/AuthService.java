@@ -4,7 +4,7 @@ import com.project.resumebuilder.Utils.JwtUtil;
 import com.project.resumebuilder.modals.User;
 import com.project.resumebuilder.dto.AuthResponse;
 import com.project.resumebuilder.dto.LoginRequest;
-import com.project.resumebuilder.dto.RegisterRequest;
+import com.project.resumebuilder.dto.RegisterRequestDTO;
 import com.project.resumebuilder.exception.ResourceExistsException;
 import com.project.resumebuilder.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -30,7 +30,7 @@ public class AuthService {
     @Value("${app.base.url:http://localhost:8080}")
     private String appBaseUrl;
 
-    public AuthResponse register(RegisterRequest request) {
+    public AuthResponse register(RegisterRequestDTO request) {
         log.info("Inside AuthService: register(){}", request);
 
         if (userRepository.existsByEmail(request.getEmail())) {
@@ -81,7 +81,7 @@ public class AuthService {
                 .build();
     }
 
-    private User toDocument(RegisterRequest request) {
+    private User toDocument(RegisterRequestDTO request) {
         return User.builder()
                 .name(request.getName())
                 .email(request.getEmail())
