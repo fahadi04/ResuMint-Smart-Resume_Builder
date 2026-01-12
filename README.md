@@ -80,22 +80,5 @@ git clone https://github.com/your-username/resumint-backend.git
 2. Navigate to the project directory
 cd resumint-backend
 
-**Configure database in application.properties**
-
-spring.datasource.url=jdbc:mongodb://localhost:27017/resumint
-spring.datasource.username=root
-spring.datasource.password=yourpassword
-
 **Run the application**
 mvn spring-boot:run
-
-**🔮 Future Enhancements**
-AI-powered resume suggestions
-Resume PDF export
-Admin dashboard
-Role-based access control (Admin/User)
-Frontend integration (React / Angular)
-
-**🤝 Contribution**
-Contributions are welcome!
-Feel free to fork the repository and submit a pull request.
