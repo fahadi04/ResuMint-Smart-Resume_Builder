@@ -59,13 +59,12 @@ public class SecurityConfig {
     }
 
 
-//    @Bean
+    //    @Bean
     @Bean
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://resumint-smart-resumebuilder-production.up.railway.app"));
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "" +
-                "PATCH", "DELETE", "OPTIONS"));
+        configuration.setAllowedOrigins(Arrays.asList("*"));
+        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(Arrays.asList("*"));
         configuration.setAllowCredentials(true);
 
